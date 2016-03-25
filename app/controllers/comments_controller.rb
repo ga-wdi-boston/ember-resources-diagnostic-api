@@ -54,6 +54,6 @@ class CommentsController < ApplicationController
     end
 
     def comment_params
-      params[:comment]
+      params[:comment].permit(:subject, :body, :blogpost_id)
     end
 end
